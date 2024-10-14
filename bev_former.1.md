@@ -10,6 +10,9 @@ q问的是在不在前面，k是回答，它俩相乘计算的是相关性，用
 q和k的维度会比较低，所以乘以的w维度与v的不同？q和k相当于作了降维，v没有降维，得到的就是一个与其他embedding在同等维度的向量，虽然是delta，但它要用于加法运算，也不能降维
 
 “汇聚”通常指的是将多个向量或信息整合成一个单一的表示
+
+k、v相当于已知的x_ i，y_i，q是未知的x
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExOTY1OTMzMjddfQ==
+eyJoaXN0b3J5IjpbLTEzMTE1NTAyNzksLTExOTY1OTMzMjddfQ
+==
 -->
