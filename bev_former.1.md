@@ -31,7 +31,7 @@ $$\text{Attention Output} = \sum_{i=1}^{n} \alpha_i x_i$$
    
   $$ \text{score}(q, k_i) = q \cdot k_i$$
    
-   其中，q 是查询向$k_i$ 个输入的键向量。
+   其中，q 是查询向量，$k_i$ 是第$i$个输入的键向量。
 
 2. **注意力权重的计算**：
    对所有输入的相似度进行归一化，通常使用 Softmax 函数将相似度转化为概率分布：
@@ -145,8 +145,8 @@ Transformer 的核心架构，包括**多头自注意力机制**和**前馈神�
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNjYyNTgyNDEsMTU5MzE2NDM2MCwtMT
-UyNjQ1MzQ1Myw4NTY0NTcwNTAsNDYxNzQxODUsODkwMDg1MDE1
-LC01OTA3MzAxNTUsLTIwNDg0MjcwNywxNjYwOTc0MTcyLC0xMT
-k2NTkzMzI3XX0=
+eyJoaXN0b3J5IjpbLTI2OTE2NDYwMiwxNTkzMTY0MzYwLC0xNT
+I2NDUzNDUzLDg1NjQ1NzA1MCw0NjE3NDE4NSw4OTAwODUwMTUs
+LTU5MDczMDE1NSwtMjA0ODQyNzA3LDE2NjA5NzQxNzIsLTExOT
+Y1OTMzMjddfQ==
 -->
