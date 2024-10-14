@@ -18,7 +18,7 @@ k、v相当于已知的x_ i，y_i，q是未知的x，用已知的去求f(x)，
 ### 通用的注意力汇聚公式
 
 假设有一组输入特征 $\{x_1, x_2, ..., x_n\}$，这些输入特征通过注意力机制计算出相应的权重 $\{\alpha_1, \alpha_2, ..., \alpha_n\}$，注意力汇聚的输出可以表示为：
-$$\text{Attention Output} = \sum_{i=1}^{n} \alpha_i x_i$$
+$$\text{Attention Output} = \sum_{i=1}^{n} \alpha_i x_$$
 其中：
 - $x_i$ 是第$i$ 个输入特征向量（如序列中的词向量或图像中的像素特征）。
 - $\alpha_i$ 是第 i 个输入的注意力权重，反映了输入 $x_i$ 在当前任务中所占的重要性。
@@ -45,7 +45,7 @@ $$\text{Attention Output} = \sum_{i=1}^{n} \alpha_i x_i$$
    
    $$ \text{Attention Output} = \sum_{i=1}^{n} \alpha_i v_i$$
    
-   其中，$v_i$ 是第$i$ 个输入的值（Value），表示输入的特征信息。通常，值向量 $v_i$和输入特征$x_i$ 是一样的，但它们可以是不同的特征表示。
+   其中，$v_i$ 是第 个输入的值（Value），表示输入的特征信息。通常，值向量 $v_和输入特征$x_i$ 是一样的，但它们可以是不同的特征表示。
 
 ### 公式的含义
 
@@ -94,7 +94,7 @@ Transformer 的核心架构，包括**多头自注意力机制**和**前馈神�
    - **典型任务**：预测房价、股票价格、温度、销售额等连续值。
    
    - **数学形式**：回归模型通常会假设一个形式，例如：
-    $$y = f(x) + \epsilon$$
+    y = f(x) + \epsilon$
      其中 f(x 是一个函数（模型），epsilon是误差项。目标是最小化模型预测值和真实值之间的误差。
 
 ### 2. **近似算法**
@@ -145,7 +145,7 @@ Transformer 的核心架构，包括**多头自注意力机制**和**前馈神�
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMTY3NDk1MDAsMTU5MzE2NDM2MCwtMT
+eyJoaXN0b3J5IjpbLTIwNzYxMDM3ODMsMTU5MzE2NDM2MCwtMT
 UyNjQ1MzQ1Myw4NTY0NTcwNTAsNDYxNzQxODUsODkwMDg1MDE1
 LC01OTA3MzAxNTUsLTIwNDg0MjcwNywxNjYwOTc0MTcyLC0xMT
 k2NTkzMzI3XX0=
