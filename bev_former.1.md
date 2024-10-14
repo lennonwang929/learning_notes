@@ -31,27 +31,21 @@ $$
 1. **计算相似度**：
    首先，需要计算查询（Query, $q$）和键（Key, $k_i$）之间的相似度。常用的方法是点积或者其他相似度度量方法。以点积为例：
    
-   $
-   \text{score}(q, k_i) = q \cdot k_i
-   $
+   $$\text{score}(q, k_i) = q \cdot k_i$$
    
    其中，$q$ 是查询向量，$k_i$ 是第 $i$ 个输入的键向量。
 
 2. **注意力权重的计算**：
    对所有输入的相似度进行归一化，通常使用 Softmax 函数将相似度转化为概率分布：
    
-   $
-   \alpha_i = \frac{\exp(\text{score}(q, k_i))}{\sum_{j=1}^{n} \exp(\text{score}(q, k_j))}
-   $
+   $$\alpha_i = \frac{\exp(\text{score}(q, k_i))}{\sum_{j=1}^{n} \exp(\text{score}(q, k_j))}$$
    
    这样可以保证所有的权重 $\alpha_i$ 都是非负的，且总和为 1。
 
 3. **加权汇聚**：
    最后，将输入特征按照权重 $\alpha_i$ 进行加权求和，得到汇聚后的全局表示：
    
-   $
-   \text{Attention Output} = \sum_{i=1}^{n} \alpha_i v_i
-   $
+   $$ \text{Attention Output} = \sum_{i=1}^{n} \alpha_i v_i$$
    
    其中，$v_i$ 是第 $i$ 个输入的值（Value），表示输入的特征信息。通常，值向量 $v_i$ 和输入特征 $x_i$ 是一样的，但它们可以是不同的特征表示。
 
@@ -77,9 +71,7 @@ $$
 
 ### 总结
 通用的注意力汇聚公式如下：
-$
-\text{Attention Output} = \sum_{i=1}^{n} \alpha_i v_i, \quad \alpha_i = \frac{\exp(\text{score}(q, k_i))}{\sum_{j=1}^{n} \exp(\text{score}(q, k_j))}
-$
+$$\text{Attention Output} = \sum_{i=1}^{n} \alpha_i v_i, \quad \alpha_i = \frac{\exp(\text{score}(q, k_i))}{\sum_{j=1}^{n} \exp(\text{score}(q, k_j))}$$
 它表示通过注意力机制计算输入特征的重要性权重，并将输入特征按照这些权重进行加权汇总，得到全局特征表示。
 ### **Transformer 架构如何适应不同任务**
 
@@ -157,7 +149,7 @@ Transformer 的核心架构，包括**多头自注意力机制**和**前馈神�
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYxMDQyMjA2MSw4NTY0NTcwNTAsNDYxNz
-QxODUsODkwMDg1MDE1LC01OTA3MzAxNTUsLTIwNDg0MjcwNywx
-NjYwOTc0MTcyLC0xMTk2NTkzMzI3XX0=
+eyJoaXN0b3J5IjpbLTE1MjY0NTM0NTMsODU2NDU3MDUwLDQ2MT
+c0MTg1LDg5MDA4NTAxNSwtNTkwNzMwMTU1LC0yMDQ4NDI3MDcs
+MTY2MDk3NDE3MiwtMTE5NjU5MzMyN119
 -->
