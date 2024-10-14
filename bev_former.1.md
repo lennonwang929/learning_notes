@@ -18,13 +18,11 @@ k、v相当于已知的x_ i，y_i，q是未知的x，用已知的去求f(x)，
 ### 通用的注意力汇聚公式
 
 假设有一组输入特征 $\{x_1, x_2, ..., x_n\}$，这些输入特征通过注意力机制计算出相应的权重 $\{\alpha_1, \alpha_2, ..., \alpha_n\}$，注意力汇聚的输出可以表示为：
-$$
-\text{Attention Output} = \sum_{i=1}^{n} \alpha_i x_i
-$$
+$$\text{Attention Output} = \sum_{i=1}^{n} \alpha_i x_i$$
 其中：
 - $x_i$ 是第$i$ 个输入特征向量（如序列中的词向量或图像中的像素特征）。
 - $\alpha_i$ 是第 i 个输入的注意力权重，反映了输入 $x_i$ 在当前任务中所占的重要性。
-- \sum_{i=1}^{n} \alpha_i = 1，即所有的注意力权重总和为 1，这样可以保证得到的加权汇总是一个合适的比例。
+- $\sum_{i=1}^{n} \alpha_i = 1$，即所有的注意力权重总和为 1，这样可以保证得到的加权汇总是一个合适的比例。
 
 ### 具体步骤
 
@@ -33,7 +31,7 @@ $$
    
   $$ \text{score}(q, k_i) = q \cdot k_i$$
    
-   其中，q 是查询向$k_$ 是 $i$ 个输入的键向量。
+   其中，q 是查询向$k_i$ 个输入的键向量。
 
 2. **注意力权重的计算**：
    对所有输入的相似度进行归一化，通常使用 Softmax 函数将相似度转化为概率分布：
@@ -147,8 +145,8 @@ Transformer 的核心架构，包括**多头自注意力机制**和**前馈神�
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzc0OTE2Nzk4LDE1OTMxNjQzNjAsLTE1Mj
-Y0NTM0NTMsODU2NDU3MDUwLDQ2MTc0MTg1LDg5MDA4NTAxNSwt
-NTkwNzMwMTU1LC0yMDQ4NDI3MDcsMTY2MDk3NDE3MiwtMTE5Nj
-U5MzMyN119
+eyJoaXN0b3J5IjpbLTEwNjYyNTgyNDEsMTU5MzE2NDM2MCwtMT
+UyNjQ1MzQ1Myw4NTY0NTcwNTAsNDYxNzQxODUsODkwMDg1MDE1
+LC01OTA3MzAxNTUsLTIwNDg0MjcwNywxNjYwOTc0MTcyLC0xMT
+k2NTkzMzI3XX0=
 -->
