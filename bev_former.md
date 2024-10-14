@@ -71,7 +71,7 @@ $$
 
 ### 总结
 通用的注意力汇聚公式如下：
-\text{Attention Output} = \sum_{i=1}^{n} \alpha_i v_i, \quad \alpha_i = \frac{\exp(\text{score}(q, k_i))}{\sum_{j=1}^{n} \exp(\text{score}(q, k_j))}$
+$$\text{Attention Output} = \sum_{i=1}^{n} \alpha_i v_i, \quad \alpha_i = \frac{\exp(\text{score}(q, k_i))}{\sum_{j=1}^{n} \exp(\text{score}(q, k_j))}$$
 它表示通过注意力机制计算输入特征的重要性权重，并将输入特征按照这些权重进行加权汇总，得到全局特征表示。
 ### **Transformer 架构如何适应不同任务**
 
@@ -149,7 +149,8 @@ Transformer 的核心架构，包括**多头自注意力机制**和**前馈神�
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg3MTk0MDQ5NCwtMTUyNjQ1MzQ1Myw4NT
-Y0NTcwNTAsNDYxNzQxODUsODkwMDg1MDE1LC01OTA3MzAxNTUs
-LTIwNDg0MjcwNywxNjYwOTc0MTcyLC0xMTk2NTkzMzI3XX0=
+eyJoaXN0b3J5IjpbMTU5MzE2NDM2MCwtODcxOTQwNDk0LC0xNT
+I2NDUzNDUzLDg1NjQ1NzA1MCw0NjE3NDE4NSw4OTAwODUwMTUs
+LTU5MDczMDE1NSwtMjA0ODQyNzA3LDE2NjA5NzQxNzIsLTExOT
+Y1OTMzMjddfQ==
 -->
