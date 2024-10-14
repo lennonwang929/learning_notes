@@ -18,7 +18,7 @@ k、v相当于已知的x_ i，y_i，q是未知的x，用已知的去求f(x)，
 ### 通用的注意力汇聚公式
 
 假设有一组输入特征 $\{x_1, x_2, ..., x_n\}$，这些输入特征通过注意力机制计算出相应的权重 $\{\alpha_1, \alpha_2, ..., \alpha_n\}$，注意力汇聚的输出可以表示为：
-$$\text{Attention Output} = \sum_{i=1}^{n} \alpha_i x_i$$
+$$\text{Attention Output} = \sum_{i=1}^{n} \alpha_i x_$$
 其中：
 - $x_i$ 是第$i$ 个输入特征向量（如序列中的词向量或图像中的像素特征）。
 - $\alpha_i$ 是第 i 个输入的注意力权重，反映了输入 $x_i$ 在当前任务中所占的重要性。
@@ -94,7 +94,7 @@ Transformer 的核心架构，包括**多头自注意力机制**和**前馈神�
    - **典型任务**：预测房价、股票价格、温度、销售额等连续值。
    
    - **数学形式**：回归模型通常会假设一个形式，例如：
-    $$y = f(x) + \epsilon$$
+    y = f(x) + \epsilon$
      其中 f(x 是一个函数（模型），epsilon是误差项。目标是最小化模型预测值和真实值之间的误差。
 
 ### 2. **近似算法**
@@ -145,8 +145,8 @@ Transformer 的核心架构，包括**多头自注意力机制**和**前馈神�
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI2OTE2NDYwMiwxNTkzMTY0MzYwLC04Nz
-E5NDA0OTQsLTE1MjY0NTM0NTMsODU2NDU3MDUwLDQ2MTc0MTg1
-LDg5MDA4NTAxNSwtNTkwNzMwMTU1LC0yMDQ4NDI3MDcsMTY2MD
-k3NDE3MiwtMTE5NjU5MzMyN119
+eyJoaXN0b3J5IjpbODI0NDc4NjU1LC0yNjkxNjQ2MDIsMTU5Mz
+E2NDM2MCwtODcxOTQwNDk0LC0xNTI2NDUzNDUzLDg1NjQ1NzA1
+MCw0NjE3NDE4NSw4OTAwODUwMTUsLTU5MDczMDE1NSwtMjA0OD
+QyNzA3LDE2NjA5NzQxNzIsLTExOTY1OTMzMjddfQ==
 -->
