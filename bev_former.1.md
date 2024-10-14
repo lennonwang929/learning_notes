@@ -11,8 +11,7 @@ q和k的维度会比较低，所以乘以的w维度与v的不同？q和k相当�
 
 “汇聚”通常指的是将多个向量或信息整合成一个单一的表示
 
-k、v相当于已知的x_ i，y_i，q是未知的x
+k、v相当于已知的x_ i，y_i，q是未知的x，用已知的去求f(x)，
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMTE1NTAyNzksLTExOTY1OTMzMjddfQ
-==
+eyJoaXN0b3J5IjpbMTY2MDk3NDE3MiwtMTE5NjU5MzMyN119
 -->
