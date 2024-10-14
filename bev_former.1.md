@@ -25,7 +25,8 @@ Transformer 的核心架构，包括**多头自注意力机制**和**前馈神�
     
     -   输出层是一个线性层，不使用激活函数，直接输出连续值。
     -   损失函数通常是均方误差（Mean Squared Error, MSE）或均方根误差（Root Mean Squared Error, RMSE），用来衡量预测值与真实值之间的差异。
+    
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNDg0MjcwNywxNjYwOTc0MTcyLC0xMT
-k2NTkzMzI3XX0=
+eyJoaXN0b3J5IjpbLTYzMTYyMTczMywtMjA0ODQyNzA3LDE2Nj
+A5NzQxNzIsLTExOTY1OTMzMjddfQ==
 -->
