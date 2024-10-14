@@ -19,9 +19,7 @@ k、v相当于已知的x_ i，y_i，q是未知的x，用已知的去求f(x)，
 
 假设有一组输入特征 \(\{x_1, x_2, ..., x_n\}\)，这些输入特征通过注意力机制计算出相应的权重 \(\{\alpha_1, \alpha_2, ..., \alpha_n\}\)，注意力汇聚的输出可以表示为：
 $$
-\[
 \text{Attention Output} = \sum_{i=1}^{n} \alpha_i x_i
-\]
 $$
 其中：
 - \(x_i\) 是第 \(i\) 个输入特征向量（如序列中的词向量或图像中的像素特征）。
@@ -159,6 +157,7 @@ Transformer 的核心架构，包括**多头自注意力机制**和**前馈神�
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODkwMDg1MDE1LC01OTA3MzAxNTUsLTIwND
-g0MjcwNywxNjYwOTc0MTcyLC0xMTk2NTkzMzI3XX0=
+eyJoaXN0b3J5IjpbMTAwNjA2NzE0NSw4OTAwODUwMTUsLTU5MD
+czMDE1NSwtMjA0ODQyNzA3LDE2NjA5NzQxNzIsLTExOTY1OTMz
+MjddfQ==
 -->
