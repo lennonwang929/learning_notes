@@ -19,8 +19,7 @@ k、v相当于已知的x_ i，y_i，q是未知的x，用已知的去求f(x)，
 
 假设有一组输入特征 $\{x_1, x_2, ..., x_n\}$，这些输入特征通过注意力机制计算出相应的权重 $\{\alpha_1, \alpha_2, ..., \alpha_n\}$，注意力汇聚的输出可以表示为：
 $$
-\text{Attention Output} = \sum_{i=1}^{n} \alpha_i x_i
-$$
+\text{Attention Output} = \sum_{i=1}^{n} \alpha_i x_$$
 其中：
 - $x_i$ 是第$i$ 个输入特征向量（如序列中的词向量或图像中的像素特征）。
 - $\alpha_i$ 是第 i 个输入的注意力权重，反映了输入 $x_i$ 在当前任务中所占的重要性。
@@ -31,21 +30,21 @@ $$
 1. **计算相似度**：
    首先，需要计算查询（Query, q）和键（Key, k_）之间的相似度。常用的方法是点积或者其他相似度度量方法。以点积为例：
    
-   \text{score}(q, k_i) = q \cdot k_i$
+  $$ \text{score}(q, k_i) = q \cdot k_i$$
    
    其中，q 是查询向$k_$ 是 $i$ 个输入的键向量。
 
 2. **注意力权重的计算**：
    对所有输入的相似度进行归一化，通常使用 Softmax 函数将相似度转化为概率分布：
    
-   \alpha_i = \frac{\exp(\text{score}(q, k_i))}{\sum_{j=1}^{n} \exp(\text{score}(q, k_j))}$
+  $$ \alpha_i = \frac{\exp(\text{score}(q, k_i))}{\sum_{j=1}^{n} \exp(\text{score}(q, k_j))}$$
    
    这样可以保证所有的权重 \alpha_ 都是非负的，且总和为 1。
 
 3. **加权汇聚**：
    最后，将输入特征按照权重 \alpha_ 进行加权求和，得到汇聚后的全局表示：
    
-    \text{Attention Output} = \sum_{i=1}^{n} \alpha_i v_i$
+   $$ \text{Attention Output} = \sum_{i=1}^{n} \alpha_i v_i$$
    
    其中，v_ 是第i 个输入的值（Value），表示输入的特征信息。通常，值向量 v_ 和输入特征x_i 是一样的，但它们可以是不同的特征表示。
 
@@ -96,8 +95,7 @@ Transformer 的核心架构，包括**多头自注意力机制**和**前馈神�
    - **典型任务**：预测房价、股票价格、温度、销售额等连续值。
    
    - **数学形式**：回归模型通常会假设一个形式，例如：
-    $$y = f(x) + \epsilon
-     $
+    $$y = f(x) + \epsilon$$
      其中 f(x 是一个函数（模型），epsilon是误差项。目标是最小化模型预测值和真实值之间的误差。
 
 ### 2. **近似算法**
@@ -148,7 +146,7 @@ Transformer 的核心架构，包括**多头自注意力机制**和**前馈神�
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjk3NTY3MzU0LDE1OTMxNjQzNjAsLTg3MT
+eyJoaXN0b3J5IjpbMzYyNzIxNjg3LDE1OTMxNjQzNjAsLTg3MT
 k0MDQ5NCwtMTUyNjQ1MzQ1Myw4NTY0NTcwNTAsNDYxNzQxODUs
 ODkwMDg1MDE1LC01OTA3MzAxNTUsLTIwNDg0MjcwNywxNjYwOT
 c0MTcyLC0xMTk2NTkzMzI3XX0=
