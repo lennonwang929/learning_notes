@@ -31,21 +31,21 @@ $$
 1. **计算相似度**：
    首先，需要计算查询（Query, q）和键（Key, k_）之间的相似度。常用的方法是点积或者其他相似度度量方法。以点积为例：
    
-   \text{score}(q, k_i) = q \cdot k_i$
+  $$ \text{score}(q, k_i) = q \cdot k_i$$
    
    其中，q 是查询向$k_$ 是 $i$ 个输入的键向量。
 
 2. **注意力权重的计算**：
    对所有输入的相似度进行归一化，通常使用 Softmax 函数将相似度转化为概率分布：
    
-   \alpha_i = \frac{\exp(\text{score}(q, k_i))}{\sum_{j=1}^{n} \exp(\text{score}(q, k_j))}$
+  $$ \alpha_i = \frac{\exp(\text{score}(q, k_i))}{\sum_{j=1}^{n} \exp(\text{score}(q, k_j))}$$
    
    这样可以保证所有的权重 \alpha_ 都是非负的，且总和为 1。
 
 3. **加权汇聚**：
    最后，将输入特征按照权重 \alpha_ 进行加权求和，得到汇聚后的全局表示：
    
-    \text{Attention Output} = \sum_{i=1}^{n} \alpha_i v_i$
+   $$ \text{Attention Output} = \sum_{i=1}^{n} \alpha_i v_i$$
    
    其中，v_ 是第i 个输入的值（Value），表示输入的特征信息。通常，值向量 v_ 和输入特征x_i 是一样的，但它们可以是不同的特征表示。
 
@@ -96,9 +96,7 @@ Transformer 的核心架构，包括**多头自注意力机制**和**前馈神�
    - **典型任务**：预测房价、股票价格、温度、销售额等连续值。
    
    - **数学形式**：回归模型通常会假设一个形式，例如：
-    $$
-     y = f(x) + \epsilon
-     $
+    $$y = f(x) + \epsilon$$
      其中 f(x 是一个函数（模型），epsilon是误差项。目标是最小化模型预测值和真实值之间的误差。
 
 ### 2. **近似算法**
@@ -149,8 +147,8 @@ Transformer 的核心架构，包括**多头自注意力机制**和**前馈神�
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAzNjUwNjA1NiwxNTkzMTY0MzYwLC0xNT
-I2NDUzNDUzLDg1NjQ1NzA1MCw0NjE3NDE4NSw4OTAwODUwMTUs
-LTU5MDczMDE1NSwtMjA0ODQyNzA3LDE2NjA5NzQxNzIsLTExOT
-Y1OTMzMjddfQ==
+eyJoaXN0b3J5IjpbNzc0OTE2Nzk4LDE1OTMxNjQzNjAsLTE1Mj
+Y0NTM0NTMsODU2NDU3MDUwLDQ2MTc0MTg1LDg5MDA4NTAxNSwt
+NTkwNzMwMTU1LC0yMDQ4NDI3MDcsMTY2MDk3NDE3MiwtMTE5Nj
+U5MzMyN119
 -->
