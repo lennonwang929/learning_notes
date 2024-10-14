@@ -45,7 +45,7 @@ $$\text{Attention Output} = \sum_{i=1}^{n} \alpha_i x_$$
    
    $$ \text{Attention Output} = \sum_{i=1}^{n} \alpha_i v_i$$
    
-   其中，v_ 是第i 个输入的值（Value），表示输入的特征信息。通常，值向量 v_ 和输入特征x_i 是一样的，但它们可以是不同的特征表示。
+   其中，$v_i$ 是第 个输入的值（Value），表示输入的特征信息。通常，值向量 $v_和输入特征$x_i$ 是一样的，但它们可以是不同的特征表示。
 
 ### 公式的含义
 
@@ -145,8 +145,8 @@ Transformer 的核心架构，包括**多头自注意力机制**和**前馈神�
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODI0NDc4NjU1LC0yNjkxNjQ2MDIsMTU5Mz
-E2NDM2MCwtODcxOTQwNDk0LC0xNTI2NDUzNDUzLDg1NjQ1NzA1
-MCw0NjE3NDE4NSw4OTAwODUwMTUsLTU5MDczMDE1NSwtMjA0OD
-QyNzA3LDE2NjA5NzQxNzIsLTExOTY1OTMzMjddfQ==
+eyJoaXN0b3J5IjpbLTIwNzYxMDM3ODMsODI0NDc4NjU1LDE1OT
+MxNjQzNjAsLTg3MTk0MDQ5NCwtMTUyNjQ1MzQ1Myw4NTY0NTcw
+NTAsNDYxNzQxODUsODkwMDg1MDE1LC01OTA3MzAxNTUsLTIwND
+g0MjcwNywxNjYwOTc0MTcyLC0xMTk2NTkzMzI3XX0=
 -->
