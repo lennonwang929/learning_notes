@@ -18,7 +18,7 @@ k、v相当于已知的x_ i，y_i，q是未知的x，用已知的去求f(x)，
 ### 通用的注意力汇聚公式
 
 假设有一组输入特征 $\{x_1, x_2, ..., x_n\}$，这些输入特征通过注意力机制计算出相应的权重 $\{\alpha_1, \alpha_2, ..., \alpha_n\}$，注意力汇聚的输出可以表示为：
-$$\text{Attention Output} = \sum_{i=1}^{n} \alpha_i x_$$
+$$ \text{Attention Output} = \sum_{i=1}^{n} \alpha_i x_i$$
 其中：
 - $x_i$ 是第$i$ 个输入特征向量（如序列中的词向量或图像中的像素特征）。
 - $\alpha_i$ 是第 i 个输入的注意力权重，反映了输入 $x_i$ 在当前任务中所占的重要性。
@@ -145,8 +145,9 @@ Transformer 的核心架构，包括**多头自注意力机制**和**前馈神�
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNzYxMDM3ODMsODI0NDc4NjU1LDE1OT
-MxNjQzNjAsLTg3MTk0MDQ5NCwtMTUyNjQ1MzQ1Myw4NTY0NTcw
-NTAsNDYxNzQxODUsODkwMDg1MDE1LC01OTA3MzAxNTUsLTIwND
-g0MjcwNywxNjYwOTc0MTcyLC0xMTk2NTkzMzI3XX0=
+eyJoaXN0b3J5IjpbLTIxMjgzODUwMjgsLTIwNzYxMDM3ODMsOD
+I0NDc4NjU1LDE1OTMxNjQzNjAsLTg3MTk0MDQ5NCwtMTUyNjQ1
+MzQ1Myw4NTY0NTcwNTAsNDYxNzQxODUsODkwMDg1MDE1LC01OT
+A3MzAxNTUsLTIwNDg0MjcwNywxNjYwOTc0MTcyLC0xMTk2NTkz
+MzI3XX0=
 -->
