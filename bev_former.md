@@ -94,7 +94,7 @@ Transformer 的核心架构，包括**多头自注意力机制**和**前馈神�
    - **典型任务**：预测房价、股票价格、温度、销售额等连续值。
    
    - **数学形式**：回归模型通常会假设一个形式，例如：
-    y = f(x) + \epsilon$
+    $y = f(x) + \epsilon$
      其中 f(x 是一个函数（模型），epsilon是误差项。目标是最小化模型预测值和真实值之间的误差。
 
 ### 2. **近似算法**
@@ -145,9 +145,9 @@ Transformer 的核心架构，包括**多头自注意力机制**和**前馈神�
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTIwNjQ5NzY0LC0yMDc2MTAzNzgzLDgyND
-Q3ODY1NSwxNTkzMTY0MzYwLC04NzE5NDA0OTQsLTE1MjY0NTM0
-NTMsODU2NDU3MDUwLDQ2MTc0MTg1LDg5MDA4NTAxNSwtNTkwNz
-MwMTU1LC0yMDQ4NDI3MDcsMTY2MDk3NDE3MiwtMTE5NjU5MzMy
-N119
+eyJoaXN0b3J5IjpbLTIwMTE5Mjc1NTIsOTIwNjQ5NzY0LC0yMD
+c2MTAzNzgzLDgyNDQ3ODY1NSwxNTkzMTY0MzYwLC04NzE5NDA0
+OTQsLTE1MjY0NTM0NTMsODU2NDU3MDUwLDQ2MTc0MTg1LDg5MD
+A4NTAxNSwtNTkwNzMwMTU1LC0yMDQ4NDI3MDcsMTY2MDk3NDE3
+MiwtMTE5NjU5MzMyN119
 -->
