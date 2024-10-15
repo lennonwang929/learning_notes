@@ -38,10 +38,10 @@ $$ \text{Attention Output} = \sum_{i=1}^{n} \alpha_i x_i$$
    
   $$ \alpha_i = \frac{\exp(\text{score}(q, k_i))}{\sum_{j=1}^{n} \exp(\text{score}(q, k_j))}$$
    
-   这样可以保证所有的权重 \alpha_ 都是非负的，且总和为 1。
+   这样可以保证所有的权重 $\alpha_i$ 都是非负的，且总和为 1。
 
 3. **加权汇聚**：
-   最后，将输入特征按照权重 \alpha_ 进行加权求和，得到汇聚后的全局表示：
+   最后，将输入特征按照权重 $\alpha_i$ 进行加权求和，得到汇聚后的全局表示：
    
    $$ \text{Attention Output} = \sum_{i=1}^{n} \alpha_i v_i$$
    
@@ -145,7 +145,7 @@ Transformer 的核心架构，包括**多头自注意力机制**和**前馈神�
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTI5MTI2NDc0LC0yMDc2MTAzNzgzLDE1OT
+eyJoaXN0b3J5IjpbOTIwNjQ5NzY0LC0yMDc2MTAzNzgzLDE1OT
 MxNjQzNjAsLTE1MjY0NTM0NTMsODU2NDU3MDUwLDQ2MTc0MTg1
 LDg5MDA4NTAxNSwtNTkwNzMwMTU1LC0yMDQ4NDI3MDcsMTY2MD
 k3NDE3MiwtMTE5NjU5MzMyN119
