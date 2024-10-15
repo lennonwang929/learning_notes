@@ -45,7 +45,7 @@ $$ \text{Attention Output} = \sum_{i=1}^{n} \alpha_i x_i$$
    
    $$ \text{Attention Output} = \sum_{i=1}^{n} \alpha_i v_i$$
    
-   其中，$v_i$ 是第 个输入的值（Value），表示输入的特征信息。通常，值向量 $v_和输入特征$x_i$ 是一样的，但它们可以是不同的特征表示。
+   其中，$v_i$ 是第 个输入的值（Value），表示输入的特征信息。通常，值向量 $v_i$和输入特征$x_i$ 是一样的，但它们可以是不同的特征表示。
 
 ### 公式的含义
 
@@ -55,7 +55,7 @@ $$ \text{Attention Output} = \sum_{i=1}^{n} \alpha_i x_i$$
 
 3. **值（Value）**：值向量 $v_i$ 是最终需要加权汇聚的输入特征信息，通常和键 $k_i$ 一起从输入特征 $x_i$ 中生成。
 
-4. **权重（$\alpha_i$)**：注意力权重 \alpha_ 是根据查询和键之间的相似度动态计算得到的，反映了输入 x_ 对当前查询的贡献大小。通过 Softmax 归一化，所有的权重加起来为 1。
+4. **权重（$\alpha_i$)**：注意力权重 $\alpha_i$ 是根据查询和键之间的相似度动态计算得到的，反映了输入$x_i$ 对当前查询的贡献大小。通过 Softmax 归一化，所有的权重加起来为 1。
 
 5. **加权汇聚**：最终的注意力输出是对所有输入特征的加权汇聚，其中权重根据查询与输入的相关性动态分配。这种机制可以让模型根据任务的需要动态地选择最重要的信息，而忽略不相关的部分。
 
@@ -145,7 +145,7 @@ Transformer 的核心架构，包括**多头自注意力机制**和**前馈神�
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODk1MTM5Nzc1LC0yMDc2MTAzNzgzLDE1OT
+eyJoaXN0b3J5IjpbNTI5MTI2NDc0LC0yMDc2MTAzNzgzLDE1OT
 MxNjQzNjAsLTE1MjY0NTM0NTMsODU2NDU3MDUwLDQ2MTc0MTg1
 LDg5MDA4NTAxNSwtNTkwNzMwMTU1LC0yMDQ4NDI3MDcsMTY2MD
 k3NDE3MiwtMTE5NjU5MzMyN119
