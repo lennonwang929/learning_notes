@@ -72,6 +72,7 @@ $$ \text{Attention Output} = \sum_{i=1}^{n} \alpha_i x_i$$
 $$\text{Attention Output} = \sum_{i=1}^{n} \alpha_i v_i, \quad \alpha_i = \frac{\exp(\text{score}(q, k_i))}{\sum_{j=1}^{n} \exp(\text{score}(q, k_j))}$$
 它表示通过注意力机制计算输入特征的重要性权重，并将输入特征按照这些权重进行加权汇总，得到全局特征表示。
 ### **Transformer 架构如何适应不同任务**
+注意力机制是一种通过计算输入之间相关性来动态聚焦于重要信息的技术。其核心思想是：在处理一组输入时，模型可以根据输入之间的相关性，为每个输入分配不同的权重，而不是简单地处理所有输入都同等重要。
 
 Transformer 的核心架构，包括**多头自注意力机制**和**前馈神经网络**，本质上是通用的。根据不同的任务，它的输出层和损失函数会有所不同：
 
@@ -145,8 +146,9 @@ Transformer 的核心架构，包括**多头自注意力机制**和**前馈神�
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMTE5Mjc1NTIsOTIwNjQ5NzY0LC0yMD
-c2MTAzNzgzLDE1OTMxNjQzNjAsLTE1MjY0NTM0NTMsODU2NDU3
-MDUwLDQ2MTc0MTg1LDg5MDA4NTAxNSwtNTkwNzMwMTU1LC0yMD
-Q4NDI3MDcsMTY2MDk3NDE3MiwtMTE5NjU5MzMyN119
+eyJoaXN0b3J5IjpbNjc4MDQ2NDU2LC0yMDExOTI3NTUyLDkyMD
+Y0OTc2NCwtMjA3NjEwMzc4MywxNTkzMTY0MzYwLC0xNTI2NDUz
+NDUzLDg1NjQ1NzA1MCw0NjE3NDE4NSw4OTAwODUwMTUsLTU5MD
+czMDE1NSwtMjA0ODQyNzA3LDE2NjA5NzQxNzIsLTExOTY1OTMz
+MjddfQ==
 -->
