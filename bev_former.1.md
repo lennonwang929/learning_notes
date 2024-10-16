@@ -9,7 +9,7 @@ QKV
 q问的是在不在前面，k是回答，它俩相乘计算的是相关性，用相关性乘以v，得到一个delta变化的向量，基础向量加这个向量就会得到一个新的向量，这个向量会丰富原词语，在前面丰富，因为q问的是在不在前面，但是这个在不在前面是怎么体现的，应该是在回传更新的时候体现，或者是在不在前面这句话有一个向量encoding?那又是怎么体现的，又或者是在q*k后将后面的都设置为0？
 q和k的维度会比较低，所以乘以的w维度与v的不同？q和k相当于作了降维，v没有降维，得到的就是一个与其他embedding在同等维度的向量，虽然是delta，但它要用于加法运算，也不能降维
 ## Transformer与子空间聚类
-子空间聚类是找到一组来自同一个子空间内的其他向量来表示这个向量，X=XZ，得到的这个表示矩阵Z中的元素，可以作为系数将其他向量线性组合为这个向量，而自注意力机制用三个不同的权重矩阵分别对原特征进行处理，目的是获得几个不同视角的特征，但来源一致，不同于X=XZ中，从头d与某个向量相关性较大的一组其他向量，这些向量可以通过线性组合表示这个向量，通过注意力权重对这些向量进行线性组合会生成一个新向量，而这个新向量与原来的这个向量会很相似，但又有细微的差别，从而通过这种方式生成新向量
+子空间聚类是找到一组来自同一个子空间内的其他向量来表示这个向量，X=XZ，得到的这个表示矩阵Z中的元素，可以作为系数将其他向量线性组合为这个向量，而自注意力机制用三个不同的权重矩阵分别对原特征进行处理，目的是获得几个不同视角的特征，但来源一致，不同于X=XZ中，从头到尾都用的是X，与某个向量相关性较大的一组其他向量，这些向量可以通过线性组合表示这个向量，通过注意力权重对这些向量进行线性组合会生成一个新向量，而这个新向量与原来的这个向量会很相似，但又有细微的差别，从而通过这种方式生成新向量
 “汇聚”通常指的是将多个向量或信息整合成一个单一的表示
 ### **为什么不直接使用输入序列作为 K 和 V？**
 
@@ -155,10 +155,10 @@ Transformer 的核心架构，包括**多头自注意力机制**和**前馈神�
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MzkyODI1ODMsLTEwMzM5NzYzMDUsMT
-ExMjU3MzYxNSw3MDM4NjIxMTksMTgzNzE4MTI5Niw2NzgwNDY0
-NTYsLTIwMTE5Mjc1NTIsOTIwNjQ5NzY0LC0yMDc2MTAzNzgzLD
-E1OTMxNjQzNjAsLTE1MjY0NTM0NTMsODU2NDU3MDUwLDQ2MTc0
-MTg1LDg5MDA4NTAxNSwtNTkwNzMwMTU1LC0yMDQ4NDI3MDcsMT
-Y2MDk3NDE3MiwtMTE5NjU5MzMyN119
+eyJoaXN0b3J5IjpbNjY1Mjk5MzksLTEwMzM5NzYzMDUsMTExMj
+U3MzYxNSw3MDM4NjIxMTksMTgzNzE4MTI5Niw2NzgwNDY0NTYs
+LTIwMTE5Mjc1NTIsOTIwNjQ5NzY0LC0yMDc2MTAzNzgzLDE1OT
+MxNjQzNjAsLTE1MjY0NTM0NTMsODU2NDU3MDUwLDQ2MTc0MTg1
+LDg5MDA4NTAxNSwtNTkwNzMwMTU1LC0yMDQ4NDI3MDcsMTY2MD
+k3NDE3MiwtMTE5NjU5MzMyN119
 -->
