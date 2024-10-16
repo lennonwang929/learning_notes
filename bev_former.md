@@ -24,6 +24,9 @@ k、v相当于已知的x_ i，y_i，q是未知的x，用已知的去求f(x)，
 **Transformer 主要用于分类任务和生成任务，而不是回归任务**
 一个通用的注意力汇聚（Attention Pooling）公式通常涉及对输入进行加权汇聚（加权平均），其中每个输入的权重由注意力机制动态计算得到。**注意力汇聚**的核心思想是：根据输入之间的相关性，为每个输入分配不同的权重，进而对输入特征进行加权汇聚，输出一个全局的表示。
 
+### 注意力机制
+注意力机制是一种通过计算输入之间相关性来动态聚焦于重要信息的技术。其核心思想是：在处理一组输入时，模型可以根据输入之间的相关性，为每个输入分配不同的权重，而不是简单地处理所有输入都同等重要。
+
 ### 通用的注意力汇聚公式
 
 假设有一组输入特征 $\{x_1, x_2, ..., x_n\}$，这些输入特征通过注意力机制计算出相应的权重 $\{\alpha_1, \alpha_2, ..., \alpha_n\}$，注意力汇聚的输出可以表示为：
@@ -155,11 +158,11 @@ Transformer 的核心架构，包括**多头自注意力机制**和**前馈神�
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjY1Mjk5MzksLTEwMzM5NzYzMDUsMTExMj
-U3MzYxNSw3MDM4NjIxMTksMTgzNzE4MTI5Niw2NzgwNDY0NTYs
-LTIwMTE5Mjc1NTIsOTIwNjQ5NzY0LC0yMDc2MTAzNzgzLDgyND
-Q3ODY1NSwxNTkzMTY0MzYwLC04NzE5NDA0OTQsLTE1MjY0NTM0
-NTMsODU2NDU3MDUwLDQ2MTc0MTg1LDg5MDA4NTAxNSwtNTkwNz
-MwMTU1LC0yMDQ4NDI3MDcsMTY2MDk3NDE3MiwtMTE5NjU5MzMy
-N119
+eyJoaXN0b3J5IjpbLTk3ODM5ODM0OCw2NjUyOTkzOSwtMTAzMz
+k3NjMwNSwxMTEyNTczNjE1LDcwMzg2MjExOSwxODM3MTgxMjk2
+LDY3ODA0NjQ1NiwtMjAxMTkyNzU1Miw5MjA2NDk3NjQsLTIwNz
+YxMDM3ODMsODI0NDc4NjU1LDE1OTMxNjQzNjAsLTg3MTk0MDQ5
+NCwtMTUyNjQ1MzQ1Myw4NTY0NTcwNTAsNDYxNzQxODUsODkwMD
+g1MDE1LC01OTA3MzAxNTUsLTIwNDg0MjcwNywxNjYwOTc0MTcy
+XX0=
 -->
