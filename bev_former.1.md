@@ -9,9 +9,17 @@ QKV
 q问的是在不在前面，k是回答，它俩相乘计算的是相关性，用相关性乘以v，得到一个delta变化的向量，基础向量加这个向量就会得到一个新的向量，这个向量会丰富原词语，在前面丰富，因为q问的是在不在前面，但是这个在不在前面是怎么体现的，应该是在回传更新的时候体现，或者是在不在前面这句话有一个向量encoding?那又是怎么体现的，又或者是在q*k后将后面的都设置为0？
 q和k的维度会比较低，所以乘以的w维度与v的不同？q和k相当于作了降维，v没有降维，得到的就是一个与其他embedding在同等维度的向量，虽然是delta，但它要用于加法运算，也不能降维
 ## Transformer与子空间聚类
-子空间聚类是找到一组来自同一个子空间内的其他向量来表示这个向量，X=XZ，得到的这个表示矩阵Z中的元素，可以作为系数将其他向量线性组合为这个向量，而自注意力机制用三个不同的权重矩阵分别对原特征进行处理，它们的之间可以与某个向量相关性较大的一组其他向量，这些向量可以通过线性组合表示这个向量，通过注意力权重对这些向量进行线性组合会生成一个新向量，而这个新向量与原来的这个向量会很相似，但又有细微的差别，从而通过这种方式生成新向量
+子空间聚类是找到一组来自同一个子空间内的其他向量来表示这个向量，X=XZ，得到的这个表示矩阵Z中的元素，可以作为系数将其他向量线性组合为这个向量，而自注意力机制用三个不同的权重矩阵分别对原特征进行处理，目的是获得几个不同视角的特征，但来源一致，bu to与某个向量相关性较大的一组其他向量，这些向量可以通过线性组合表示这个向量，通过注意力权重对这些向量进行线性组合会生成一个新向量，而这个新向量与原来的这个向量会很相似，但又有细微的差别，从而通过这种方式生成新向量
 “汇聚”通常指的是将多个向量或信息整合成一个单一的表示
+### **为什么不直接使用输入序列作为 K 和 V？**
 
+在 Transformer 中，我们不直接将输入向量作为 K 和 V，而是通过线性变换生成新的向量，这有几个重要的原因：
+
+-   **特征提取**：通过不同的权重矩阵生成 Q、K、V，可以提取出输入序列的不同视角或特征。K 和 V 通过权重矩阵的变换可以捕捉到输入序列的不同方面的信息，而不是简单地使用原始输入。
+    
+-   **控制维度**：Q、K、V 通过线性变换可以对维度进行调整。比如，在多头注意力机制中，Q、K、V 的维度通常会被缩小，这样可以并行计算多个注意力头。
+    
+-   **增强灵活性**：线性变换提供了更大的模型灵活性和学习能力。在不同任务中，Q、K、V 的权重矩阵可以学习到不同的特征表示，这使得模型具有更好的泛化能力。
 k、v相当于已知的x_ i，y_i，q是未知的x，用已知的去求f(x)，
 **Transformer 主要用于分类任务和生成任务，而不是回归任务**
 一个通用的注意力汇聚（Attention Pooling）公式通常涉及对输入进行加权汇聚（加权平均），其中每个输入的权重由注意力机制动态计算得到。**注意力汇聚**的核心思想是：根据输入之间的相关性，为每个输入分配不同的权重，进而对输入特征进行加权汇聚，输出一个全局的表示。
@@ -147,9 +155,10 @@ Transformer 的核心架构，包括**多头自注意力机制**和**前馈神�
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTExMjU3MzYxNSw3MDM4NjIxMTksMTgzNz
-E4MTI5Niw2NzgwNDY0NTYsLTIwMTE5Mjc1NTIsOTIwNjQ5NzY0
-LC0yMDc2MTAzNzgzLDE1OTMxNjQzNjAsLTE1MjY0NTM0NTMsOD
-U2NDU3MDUwLDQ2MTc0MTg1LDg5MDA4NTAxNSwtNTkwNzMwMTU1
-LC0yMDQ4NDI3MDcsMTY2MDk3NDE3MiwtMTE5NjU5MzMyN119
+eyJoaXN0b3J5IjpbMTUzMjI5NTgzOCwxMTEyNTczNjE1LDcwMz
+g2MjExOSwxODM3MTgxMjk2LDY3ODA0NjQ1NiwtMjAxMTkyNzU1
+Miw5MjA2NDk3NjQsLTIwNzYxMDM3ODMsMTU5MzE2NDM2MCwtMT
+UyNjQ1MzQ1Myw4NTY0NTcwNTAsNDYxNzQxODUsODkwMDg1MDE1
+LC01OTA3MzAxNTUsLTIwNDg0MjcwNywxNjYwOTc0MTcyLC0xMT
+k2NTkzMzI3XX0=
 -->
