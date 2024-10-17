@@ -77,7 +77,7 @@ $$ \text{Attention Output} = \sum_{i=1}^{n} \alpha_i x_i$$
 ### 常见的注意力评分函数
 
 1. **点积注意力（Dot-Product Attention）**：
-   这是最常用的评分函数，计算 $$ $ $ 的点积来衡量相似度：
+   这是最常用的评分函数，计算 $ K$ 的点积来衡量相似度：
    $$
    \text{score}(Q, K) = \frac{Q \cdot K^T}{\sqrt{d_k}}
    $$
@@ -206,11 +206,11 @@ Transformer 的核心架构，包括**多头自注意力机制**和**前馈神�
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwODM0NDMyODIsMTg1ODYzMzA2NSwtMT
-cyNzI1MjUyOCwxMjM1NTkyODEyLC05NzgzOTgzNDgsNjY1Mjk5
-MzksLTEwMzM5NzYzMDUsMTExMjU3MzYxNSw3MDM4NjIxMTksMT
-gzNzE4MTI5Niw2NzgwNDY0NTYsLTIwMTE5Mjc1NTIsOTIwNjQ5
-NzY0LC0yMDc2MTAzNzgzLDgyNDQ3ODY1NSwxNTkzMTY0MzYwLC
-04NzE5NDA0OTQsLTE1MjY0NTM0NTMsODU2NDU3MDUwLDQ2MTc0
-MTg1XX0=
+eyJoaXN0b3J5IjpbLTE1MTA3NjExMjUsLTIwODM0NDMyODIsLT
+E3MjcyNTI1MjgsMTIzNTU5MjgxMiwtOTc4Mzk4MzQ4LDY2NTI5
+OTM5LC0xMDMzOTc2MzA1LDExMTI1NzM2MTUsNzAzODYyMTE5LD
+E4MzcxODEyOTYsNjc4MDQ2NDU2LC0yMDExOTI3NTUyLDkyMDY0
+OTc2NCwtMjA3NjEwMzc4Myw4MjQ0Nzg2NTUsMTU5MzE2NDM2MC
+wtODcxOTQwNDk0LC0xNTI2NDUzNDUzLDg1NjQ1NzA1MCw0NjE3
+NDE4NV19
 -->
