@@ -72,7 +72,7 @@ $$ \text{Attention Output} = \sum_{i=1}^{n} \alpha_i x_i$$
 5. **加权汇聚**：最终的注意力输出是对所有输入特征的加权汇聚，其中权重根据查询与输入的相关性动态分配。这种机制可以让模型根据任务的需要动态地选择最重要的信息，而忽略不相关的部分。
 
 ## 注意力评分函数
-**注意力评分函数**（Attention Score Function）指的就是计算查询向量 $$ 和键向量 $ 之间相似度的方式。它在注意力机制中起着关键作用，通过对 $$ 和K $ 的相似性进行评分，来确定每个值向量 $V$ 的重要性。
+**注意力评分函数**（Attention Score Function）指的就是计算查询向量 $Q$ 和键向量 $K$ 之间相似度的方式。它在注意力机制中起着关键作用，通过对 $Q$ 和$K$ 的相似性进行评分，来确定每个值向量 $V$ 的重要性。
 
 ### 常见的注意力评分函数
 
@@ -81,10 +81,10 @@ $$ \text{Attention Output} = \sum_{i=1}^{n} \alpha_i x_i$$
    $$
    \text{score}(Q, K) = \frac{Q \cdot K^T}{\sqrt{d_k}}
    $$
-   其中，$d_$ 是键向量 K$ 的维度，点积表示查询和键向量之间的相似度，使用 $\sqrt{d_k}$ 进行缩放是为了避免点积值过大，影响梯度稳定性。
+   其中，$d_k$ 是键向量 $K$ 的维度，点积表示查询和键向量之间的相似度，使用 $\sqrt{d_k}$ 进行缩放是为了避免点积值过大，影响梯度稳定性。
 
 2. **加性注意力（Additive Attention）**：
-   加性注意力不是直接通过点积计算相似度，而是将 $ Q $ 和 $ K $ 拼接起来通过一个前馈神经网络来计算得分：
+   加性注意力不是直接通过点积计算相似度，而是将 $Q$ 和 $K$ 拼接起来通过一个前馈神经网络来计算得分：
    $$
    \text{score}(Q, K) = \text{V}^T \cdot \text{tanh}(W_q Q + W_k K)
    $$
@@ -206,11 +206,11 @@ Transformer 的核心架构，包括**多头自注意力机制**和**前馈神�
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MTA3NjExMjUsLTIwODM0NDMyODIsLT
-E3MjcyNTI1MjgsMTIzNTU5MjgxMiwtOTc4Mzk4MzQ4LDY2NTI5
-OTM5LC0xMDMzOTc2MzA1LDExMTI1NzM2MTUsNzAzODYyMTE5LD
-E4MzcxODEyOTYsNjc4MDQ2NDU2LC0yMDExOTI3NTUyLDkyMDY0
-OTc2NCwtMjA3NjEwMzc4Myw4MjQ0Nzg2NTUsMTU5MzE2NDM2MC
-wtODcxOTQwNDk0LC0xNTI2NDUzNDUzLDg1NjQ1NzA1MCw0NjE3
-NDE4NV19
+eyJoaXN0b3J5IjpbLTQzMzg2ODM3LC0yMDgzNDQzMjgyLC0xNz
+I3MjUyNTI4LDEyMzU1OTI4MTIsLTk3ODM5ODM0OCw2NjUyOTkz
+OSwtMTAzMzk3NjMwNSwxMTEyNTczNjE1LDcwMzg2MjExOSwxOD
+M3MTgxMjk2LDY3ODA0NjQ1NiwtMjAxMTkyNzU1Miw5MjA2NDk3
+NjQsLTIwNzYxMDM3ODMsODI0NDc4NjU1LDE1OTMxNjQzNjAsLT
+g3MTk0MDQ5NCwtMTUyNjQ1MzQ1Myw4NTY0NTcwNTAsNDYxNzQx
+ODVdfQ==
 -->
