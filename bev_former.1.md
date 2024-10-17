@@ -72,7 +72,7 @@ $$ \text{Attention Output} = \sum_{i=1}^{n} \alpha_i x_i$$
 5. **加权汇聚**：最终的注意力输出是对所有输入特征的加权汇聚，其中权重根据查询与输入的相关性动态分配。这种机制可以让模型根据任务的需要动态地选择最重要的信息，而忽略不相关的部分。
 
 ## 注意力评分函数
-**注意力评分函数**（Attention Score Function）指的就是计算查询向量 $$ 和键向量 $ $ 之间相似度的方式。它在注意力机制中起着关键作用，通过对 $$ 和 $ K $ 的相似性进行评分，来确定每个值向量 $ V $ 的重要性。
+**注意力评分函数**（Attention Score Function）指的就是计算查询向量 $$ 和键向量 $ $ 之间相似度的方式。它在注意力机制中起着关键作用，通过对 $$ 和 $K$ 的相似性进行评分，来确定每个值向量 $V$ 的重要性。
 
 ### 常见的注意力评分函数
 
@@ -206,11 +206,11 @@ Transformer 的核心架构，包括**多头自注意力机制**和**前馈神�
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk3MjE0NzAyNiwxMjM1NTkyODEyLC05Nz
-gzOTgzNDgsNjY1Mjk5MzksLTEwMzM5NzYzMDUsMTExMjU3MzYx
-NSw3MDM4NjIxMTksMTgzNzE4MTI5Niw2NzgwNDY0NTYsLTIwMT
-E5Mjc1NTIsOTIwNjQ5NzY0LC0yMDc2MTAzNzgzLDE1OTMxNjQz
-NjAsLTE1MjY0NTM0NTMsODU2NDU3MDUwLDQ2MTc0MTg1LDg5MD
-A4NTAxNSwtNTkwNzMwMTU1LC0yMDQ4NDI3MDcsMTY2MDk3NDE3
-Ml19
+eyJoaXN0b3J5IjpbLTE2Mjc5ODQ1ODgsMTIzNTU5MjgxMiwtOT
+c4Mzk4MzQ4LDY2NTI5OTM5LC0xMDMzOTc2MzA1LDExMTI1NzM2
+MTUsNzAzODYyMTE5LDE4MzcxODEyOTYsNjc4MDQ2NDU2LC0yMD
+ExOTI3NTUyLDkyMDY0OTc2NCwtMjA3NjEwMzc4MywxNTkzMTY0
+MzYwLC0xNTI2NDUzNDUzLDg1NjQ1NzA1MCw0NjE3NDE4NSw4OT
+AwODUwMTUsLTU5MDczMDE1NSwtMjA0ODQyNzA3LDE2NjA5NzQx
+NzJdfQ==
 -->
