@@ -91,7 +91,7 @@ $$ \text{Attention Output} = \sum_{i=1}^{n} \alpha_i x_i$$
    这里 $W_q$ 和 $W_k$ 是可学习的权重矩阵，$\text{V}$ 是一个可学习的向量。这种方法主要用于早期的注意力机制，比如 Bahdanau Attention。
 
 3. **双线性评分（Bilinear Attention）**：
-   双线性评分函数通过一个可学习的矩阵 $W$ 连：
+   双线性评分函数通过一个可学习的矩阵 $W$ 连接$Q$和$K$：
    $$
    \text{score}(Q, K) = Q^T W K
    $$
@@ -206,11 +206,11 @@ Transformer 的核心架构，包括**多头自注意力机制**和**前馈神�
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5ODE2MTY3ODYsMTIzNTU5MjgxMiwtOT
-c4Mzk4MzQ4LDY2NTI5OTM5LC0xMDMzOTc2MzA1LDExMTI1NzM2
-MTUsNzAzODYyMTE5LDE4MzcxODEyOTYsNjc4MDQ2NDU2LC0yMD
-ExOTI3NTUyLDkyMDY0OTc2NCwtMjA3NjEwMzc4MywxNTkzMTY0
-MzYwLC0xNTI2NDUzNDUzLDg1NjQ1NzA1MCw0NjE3NDE4NSw4OT
-AwODUwMTUsLTU5MDczMDE1NSwtMjA0ODQyNzA3LDE2NjA5NzQx
-NzJdfQ==
+eyJoaXN0b3J5IjpbMTI4NjkzMDA5LDEyMzU1OTI4MTIsLTk3OD
+M5ODM0OCw2NjUyOTkzOSwtMTAzMzk3NjMwNSwxMTEyNTczNjE1
+LDcwMzg2MjExOSwxODM3MTgxMjk2LDY3ODA0NjQ1NiwtMjAxMT
+kyNzU1Miw5MjA2NDk3NjQsLTIwNzYxMDM3ODMsMTU5MzE2NDM2
+MCwtMTUyNjQ1MzQ1Myw4NTY0NTcwNTAsNDYxNzQxODUsODkwMD
+g1MDE1LC01OTA3MzAxNTUsLTIwNDg0MjcwNywxNjYwOTc0MTcy
+XX0=
 -->
