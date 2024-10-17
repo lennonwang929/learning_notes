@@ -77,14 +77,14 @@ $$ \text{Attention Output} = \sum_{i=1}^{n} \alpha_i x_i$$
 ### 常见的注意力评分函数
 
 1. **点积注意力（Dot-Product Attention）**：
-   这是最常用的评分函数，计算 $K$ 的点积来衡量相似度：
+   这是最常用的评分函数，计算 $ 的点积来衡量相似度：
    $$
    \text{score}(Q, K) = \frac{Q \cdot K^T}{\sqrt{d_k}}
    $$
    其中，$d_k$ 是键向量 $K$ 的维度，点积表示查询和键向量之间的相似度，使用 $\sqrt{d_k}$ 进行缩放是为了避免点积值过大，影响梯度稳定性。
 
 2. **加性注意力（Additive Attention）**：
-   加性注意力不是直接通过点积计算相似度，而是将 $Q$ 和 $K$ 拼接起来通过一个前馈神经网络来计算得分：
+   加性注意力不是直接通过点积计算相似度，而是将 $Q$ 和KK$ 拼接起来通过一个前馈神经网络来计算得分：
    $$
    \text{score}(Q, K) = \text{V}^T \cdot \text{tanh}(W_q Q + W_k K)
    $$
@@ -206,11 +206,11 @@ Transformer 的核心架构，包括**多头自注意力机制**和**前馈神�
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI4NjkzMDA5LC0yMDgzNDQzMjgyLC0xNz
-I3MjUyNTI4LDEyMzU1OTI4MTIsLTk3ODM5ODM0OCw2NjUyOTkz
-OSwtMTAzMzk3NjMwNSwxMTEyNTczNjE1LDcwMzg2MjExOSwxOD
-M3MTgxMjk2LDY3ODA0NjQ1NiwtMjAxMTkyNzU1Miw5MjA2NDk3
-NjQsLTIwNzYxMDM3ODMsODI0NDc4NjU1LDE1OTMxNjQzNjAsLT
-g3MTk0MDQ5NCwtMTUyNjQ1MzQ1Myw4NTY0NTcwNTAsNDYxNzQx
-ODVdfQ==
+eyJoaXN0b3J5IjpbLTE4MTAxNTczMTksMTI4NjkzMDA5LC0yMD
+gzNDQzMjgyLC0xNzI3MjUyNTI4LDEyMzU1OTI4MTIsLTk3ODM5
+ODM0OCw2NjUyOTkzOSwtMTAzMzk3NjMwNSwxMTEyNTczNjE1LD
+cwMzg2MjExOSwxODM3MTgxMjk2LDY3ODA0NjQ1NiwtMjAxMTky
+NzU1Miw5MjA2NDk3NjQsLTIwNzYxMDM3ODMsODI0NDc4NjU1LD
+E1OTMxNjQzNjAsLTg3MTk0MDQ5NCwtMTUyNjQ1MzQ1Myw4NTY0
+NTcwNTBdfQ==
 -->
