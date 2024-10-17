@@ -105,17 +105,17 @@ $$ \text{Attention Output} = \sum_{i=1}^{n} \alpha_i x_i$$
 
 假设有两个查询和键向量：
 
-- $ Q = [1, 0.5] $
-- $ K_1 = [1, 0.5] $
-- $ K_2 = [0, 1] $
+- $Q = [1, 0.5]$
+- $K_1 = [1, 0.5]$
+- $K_2 = [0, 1]$
 
 我们使用点积注意力计算相似度：
 $$
 \text{score}(Q, K_1) = \frac{Q \cdot K_1^T}{\sqrt{2}} = \frac{1 \times 1 + 0.5 \times 0.5}{\sqrt{2}} = \frac{1.25}{1.414} \approx 0.88
-$
-$
+$$
+$$
 \text{score}(Q, K_2) = \frac{Q \cdot K_2^T}{\sqrt{2}} = \frac{1 \times 0 + 0.5 \times 1}{\sqrt{2}} = \frac{0.5}{1.414} \approx 0.35
-$
+$$
 
 因此，$ Q $ 更加“关注”$ K_1 $，因为它们的相似度更高。
 
@@ -206,11 +206,11 @@ Transformer 的核心架构，包括**多头自注意力机制**和**前馈神�
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NDQ0OTkwMjAsLTk3ODM5ODM0OCw2Nj
-UyOTkzOSwtMTAzMzk3NjMwNSwxMTEyNTczNjE1LDcwMzg2MjEx
-OSwxODM3MTgxMjk2LDY3ODA0NjQ1NiwtMjAxMTkyNzU1Miw5Mj
-A2NDk3NjQsLTIwNzYxMDM3ODMsMTU5MzE2NDM2MCwtMTUyNjQ1
-MzQ1Myw4NTY0NTcwNTAsNDYxNzQxODUsODkwMDg1MDE1LC01OT
-A3MzAxNTUsLTIwNDg0MjcwNywxNjYwOTc0MTcyLC0xMTk2NTkz
-MzI3XX0=
+eyJoaXN0b3J5IjpbMTIzNTU5MjgxMiwtOTc4Mzk4MzQ4LDY2NT
+I5OTM5LC0xMDMzOTc2MzA1LDExMTI1NzM2MTUsNzAzODYyMTE5
+LDE4MzcxODEyOTYsNjc4MDQ2NDU2LC0yMDExOTI3NTUyLDkyMD
+Y0OTc2NCwtMjA3NjEwMzc4MywxNTkzMTY0MzYwLC0xNTI2NDUz
+NDUzLDg1NjQ1NzA1MCw0NjE3NDE4NSw4OTAwODUwMTUsLTU5MD
+czMDE1NSwtMjA0ODQyNzA3LDE2NjA5NzQxNzIsLTExOTY1OTMz
+MjddfQ==
 -->
