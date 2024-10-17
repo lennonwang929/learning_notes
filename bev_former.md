@@ -77,7 +77,7 @@ $$ \text{Attention Output} = \sum_{i=1}^{n} \alpha_i x_i$$
 ### 常见的注意力评分函数
 
 1. **点积注意力（Dot-Product Attention）**：
-   这是最常用的评分函数，计算 $ K$ 的点积来衡量相似度：
+   这是最常用的评分函数，计算 $K$ 的点积来衡量相似度：
    $$
    \text{score}(Q, K) = \frac{Q \cdot K^T}{\sqrt{d_k}}
    $$
@@ -88,10 +88,10 @@ $$ \text{Attention Output} = \sum_{i=1}^{n} \alpha_i x_i$$
    $$
    \text{score}(Q, K) = \text{V}^T \cdot \text{tanh}(W_q Q + W_k K)
    $$
-   这里 $W_$ 和 W_$ 是可学习的权重矩阵，$\text{V}$ 是一个可学习的向量。这种方法主要用于早期的注意力机制，比如 Bahdanau Attention。
+   这里 $W_q$ 和 $W_k$ 是可学习的权重矩阵，$\text{V}$ 是一个可学习的向量。这种方法主要用于早期的注意力机制，比如 Bahdanau Attention。
 
 3. **双线性评分（Bilinear Attention）**：
-   双线性评分函数通过一个可学习的矩阵 $$ 连$ $ $：
+   双线性评分函数通过一个可学习的矩阵 $W$ 连：
    $$
    \text{score}(Q, K) = Q^T W K
    $$
@@ -206,11 +206,11 @@ Transformer 的核心架构，包括**多头自注意力机制**和**前馈神�
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQzMzg2ODM3LC0yMDgzNDQzMjgyLC0xNz
-I3MjUyNTI4LDEyMzU1OTI4MTIsLTk3ODM5ODM0OCw2NjUyOTkz
-OSwtMTAzMzk3NjMwNSwxMTEyNTczNjE1LDcwMzg2MjExOSwxOD
-M3MTgxMjk2LDY3ODA0NjQ1NiwtMjAxMTkyNzU1Miw5MjA2NDk3
-NjQsLTIwNzYxMDM3ODMsODI0NDc4NjU1LDE1OTMxNjQzNjAsLT
-g3MTk0MDQ5NCwtMTUyNjQ1MzQ1Myw4NTY0NTcwNTAsNDYxNzQx
-ODVdfQ==
+eyJoaXN0b3J5IjpbLTE5ODE2MTY3ODYsLTIwODM0NDMyODIsLT
+E3MjcyNTI1MjgsMTIzNTU5MjgxMiwtOTc4Mzk4MzQ4LDY2NTI5
+OTM5LC0xMDMzOTc2MzA1LDExMTI1NzM2MTUsNzAzODYyMTE5LD
+E4MzcxODEyOTYsNjc4MDQ2NDU2LC0yMDExOTI3NTUyLDkyMDY0
+OTc2NCwtMjA3NjEwMzc4Myw4MjQ0Nzg2NTUsMTU5MzE2NDM2MC
+wtODcxOTQwNDk0LC0xNTI2NDUzNDUzLDg1NjQ1NzA1MCw0NjE3
+NDE4NV19
 -->
