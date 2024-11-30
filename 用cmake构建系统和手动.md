@@ -1,3 +1,4 @@
+## 1. **cmake**
 
 使用 **CMake** 作为构建系统的项目通常有一个标准的工作流程。CMake 是一个非常灵活和强大的工具，可以帮助你管理和自动化构建过程。以下是一个典型的 **CMake** 项目的标准流程：
 
@@ -198,7 +199,7 @@ target_include_directories(MyProject PRIVATE include)
 
 这是一个基本的使用 **CMake** 构建系统的项目流程。它涉及到从编写 `CMakeLists.txt` 配置文件，到生成构建文件，再到编译和构建项目。CMake 的强大之处在于其跨平台支持、灵活性以及能够管理复杂依赖关系的能力。
 
-### 2. **手动编译（不使用构建工具）**
+## 2. **手动编译（不使用构建工具）**
 
 如果你的项目非常简单，且不涉及复杂的依赖关系，你也可以直接使用编译器命令手动编译 C++ 文件。
 
@@ -231,5 +232,5 @@ target_include_directories(MyProject PRIVATE include)
 -   **优点**：非常简单，适用于小型项目。
 -   **缺点**：缺乏自动化和灵活性，对于复杂项目来说不够高效。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA5ODMzOTMxN119
+eyJoaXN0b3J5IjpbNjc1ODY3MDMyXX0=
 -->
