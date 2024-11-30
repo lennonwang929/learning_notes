@@ -1,6 +1,5 @@
 
-
-是的，使用 **CMake** 作为构建系统的项目通常有一个标准的工作流程。CMake 是一个非常灵活和强大的工具，可以帮助你管理和自动化构建过程。以下是一个典型的 **CMake** 项目的标准流程：
+使用 **CMake** 作为构建系统的项目通常有一个标准的工作流程。CMake 是一个非常灵活和强大的工具，可以帮助你管理和自动化构建过程。以下是一个典型的 **CMake** 项目的标准流程：
 
 ### 1. **安装 CMake**
 
@@ -199,5 +198,5 @@ target_include_directories(MyProject PRIVATE include)
 
 这是一个基本的使用 **CMake** 构建系统的项目流程。它涉及到从编写 `CMakeLists.txt` 配置文件，到生成构建文件，再到编译和构建项目。CMake 的强大之处在于其跨平台支持、灵活性以及能够管理复杂依赖关系的能力。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzMyMDEyNjY1XX0=
+eyJoaXN0b3J5IjpbMTE5NDM5MTAwNl19
 -->
