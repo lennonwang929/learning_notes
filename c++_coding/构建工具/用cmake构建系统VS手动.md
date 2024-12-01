@@ -225,12 +225,13 @@ target_include_directories(MyProject PRIVATE include)
     ./MyProject
     
     ```
-    
+    clang++ -c hello.cpp -o hello.o
+
 
 #### 总结：
 
 -   **优点**：非常简单，适用于小型项目。
 -   **缺点**：缺乏自动化和灵活性，对于复杂项目来说不够高效。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjc1ODY3MDMyXX0=
+eyJoaXN0b3J5IjpbLTkzNTIzNjU0Nyw2NzU4NjcwMzJdfQ==
 -->
