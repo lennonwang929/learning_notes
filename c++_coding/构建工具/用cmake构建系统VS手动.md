@@ -227,12 +227,12 @@ target_include_directories(MyProject PRIVATE include)
     ```
     只编译，不链接
       ```bash
-	  clang++ -c hello.cpp -o hello.o
+    clang++ -c hello.cpp -o hello.o
 	  
     ```  
   同时完成编译和链接
-        ```bash		
-        clang++ hello.o -o hello
+        ```bash
+    clang++ hello.o -o hello
     ```  
 
 
@@ -243,5 +243,6 @@ target_include_directories(MyProject PRIVATE include)
 -   **优点**：非常简单，适用于小型项目。
 -   **缺点**：缺乏自动化和灵活性，对于复杂项目来说不够高效。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg4MTczNzM2Niw2NzU4NjcwMzJdfQ==
+eyJoaXN0b3J5IjpbLTE0OTAwNDU1MzQsLTg4MTczNzM2Niw2Nz
+U4NjcwMzJdfQ==
 -->
