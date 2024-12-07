@@ -209,7 +209,8 @@ target_include_directories(MyProject PRIVATE include)
     
     ```bash
     g++ -Wall -g -c src/main.cpp -o build/main.o
-    
+    g++ -std=c++17 -g main.cpp utils.cpp -o my_program
+
     ```
     
 -   **Step 2**: 链接对象文件 手动链接生成的对象文件：
@@ -247,6 +248,6 @@ target_include_directories(MyProject PRIVATE include)
 -   **优点**：非常简单，适用于小型项目。
 -   **缺点**：缺乏自动化和灵活性，对于复杂项目来说不够高效。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTcyOTAxNjEwOCwtODgxNzM3MzY2LDY3NT
-g2NzAzMl19
+eyJoaXN0b3J5IjpbLTg3MzcxMTcyMiwxNzI5MDE2MTA4LC04OD
+E3MzczNjYsNjc1ODY3MDMyXX0=
 -->
